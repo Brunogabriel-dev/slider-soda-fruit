@@ -162,4 +162,13 @@ header ul {
   color: #eee;
   font-size: x-large;
   font-weight: bold;
+  font-family: monospace;
+  cursor: pointer;
+  z-index: 15;
+}
+#prev {
+  left: 20px;
+}
+#next {
+  right: 20px;
 }
