@@ -28,7 +28,7 @@ header ul {
   height: 100vw;
   position: relative;
   overflow: hidden;
-  margin-top: -40px;
+  margin-top: -50px;
 }
 .list {
   width: 100%;
@@ -42,6 +42,7 @@ header ul {
   top: 0;
   left: 0;
   overflow: hidden;
+  display: none;
 }
 .item img.fruit {
   width: 90%;
@@ -183,6 +184,8 @@ header ul {
     opacity: 0;
   }
 }
-.right .item.active img.fruit{
-  animation: toActivePrev .8s ease-in-out 1;;
+.right .item.active img.fruit,
+.right .item.active .content 
+{
+  animation: toActivePrev .8s ease-in-out 1;
 }

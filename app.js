@@ -12,12 +12,13 @@ let left_each_item = 100 / (list.length - 1);
 next.onclick = () => {
   active = active >= count - 1 ? 0 : active + 1;
   leftMockup = leftMockup + left_each_item;
+  carousel.classList.remove('right')
   changeCarousel();
 }
 prev.onclick = () => {
-  active = active <= 0 ? count - 1 : active - 1;
+  active = active >= 0 ? count - 1 : active - 1;
   leftMockup = leftMockup - left_each_item;
-  carousel.classList.remove('right');
+  carousel.classList.add('right');
   changeCarousel();
 }
 function changeCarousel(){
