@@ -33,4 +33,14 @@ function changeCarousel(){
   list[active].classList.add('active');
   // change mockup background
   mockup.style.setProperty('--left', leftMockup + '%');
+
+  // refresh auto run
+  clearInterval(refreshInterval);
+  refreshInterval = setInterval(
+    () => next.click(), 5000
+  )
 }
+// add event auto run carousel 5s
+let refreshInterval = setInterval(
+  () => next.click(), 5000
+)
