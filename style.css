@@ -51,7 +51,7 @@ header ul {
   z-index: 15;
   pointer-events: none;
 }
-item .content {
+.item .content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -62,4 +62,29 @@ item .content {
   font-weight: bold;
   font-family: system-ui;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+.item {
+  display: none;
+}
+.item.active {
+  display: block;
+}
+.item.hidden {
+  display: block;
+  pointer-events: none;
+  background-color: transparent;
+  z-index: 1;
+}
+@keyframes toActive{
+  from{
+    top: 100%;
+    opacity: 0;
+  }
+}
+@keyframes toOut{
+  from{
+    top: 50%;
+    opacity: 1;
+  }
 }
