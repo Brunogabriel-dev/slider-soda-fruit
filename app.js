@@ -17,6 +17,7 @@ next.onclick = () => {
 prev.onclick = () => {
   active = active <= 0 ? count - 1 : active - 1;
   leftMockup = leftMockup - left_each_item;
+  carousel.classList.remove('right');
   changeCarousel();
 }
 function changeCarousel(){
@@ -26,4 +27,9 @@ function changeCarousel(){
   //find item old active to remove it and add class hidden
   let active_old = document.querySelector('.item.active');
   active_old.classList.remove('active');
+  active_old.classList.add('hidden');
+  //add class active in position item active new
+  list[active].classList.add('active');
+  // change mockup background
+  mockup.style.setProperty('--left', leftMockup + '%');
 }
