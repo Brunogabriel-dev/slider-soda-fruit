@@ -51,3 +51,15 @@ header ul {
   z-index: 15;
   pointer-events: none;
 }
+item .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 12rem;
+  color: #eee;
+  font-weight: bold;
+  font-family: system-ui;
+  text-transform: uppercase;
+}
