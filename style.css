@@ -27,6 +27,7 @@ header ul {
   width: 100vw;
   height: 100vw;
   position: relative;
+  overflow: hidden;
   margin-top: -40px;
 }
 .list {
@@ -87,4 +88,7 @@ header ul {
     top: 50%;
     opacity: 1;
   }
+}
+.item.item.active img.fruit{
+  animation: toActive .5s ease-in-out 1;
 }
