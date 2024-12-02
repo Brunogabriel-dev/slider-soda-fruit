@@ -77,18 +77,29 @@ header ul {
   background-color: transparent;
   z-index: 1;
 }
-@keyframes toActive{
+@keyframes toActive {
   from{
     top: 100%;
     opacity: 0;
   }
 }
-@keyframes toOut{
+@keyframes toOut {
   from{
     top: 50%;
     opacity: 1;
   }
 }
-.item.item.active img.fruit{
+.item.item.active img.fruit {
   animation: toActive .5s ease-in-out 1;
+}
+.item.hidden img.fruit {
+  animation: toOut .8s ease-in-out 1;
+  top: -100%;
+  opacity: 0;
+}
+.item.active .content {
+  animation: toActive .8s ease-in-out 1;
+}
+.item.hidden .content {
+  opacity: 0;
 }
