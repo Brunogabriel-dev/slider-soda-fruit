@@ -16,4 +16,14 @@ next.onclick = () => {
 }
 prev.onclick = () => {
   active = active <= 0 ? count - 1 : active - 1;
+  leftMockup = leftMockup - left_each_item;
+  changeCarousel();
+}
+function changeCarousel(){
+  // find item has class hidden to remove it
+  let hidden_old = document.querySelector('.item.hidden');
+  if(hidden_old) hidden_old.classList.remove('hidden');
+  //find item old active to remove it and add class hidden
+  let active_old = document.querySelector('.item.active');
+  active_old.classList.remove('active');
 }
